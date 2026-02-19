@@ -15,7 +15,7 @@ button.addEventListener(("click"), () => {
         toDo.innerText = taskArr;
     }
     
-    // rendering the lis to DOM
+    // rendering lis to DOM
     function render ( ) {
         ul.appendChild(toDo);
         taskInput.value = "";
@@ -34,7 +34,6 @@ button.addEventListener(("click"), () => {
         });
     }
 
-    // 
     toDoNodes( );
     render ( );
     removeToDo( );

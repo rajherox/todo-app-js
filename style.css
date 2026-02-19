@@ -29,7 +29,6 @@ h2 {
 .inputContainer {
     display: flex;
     justify-content:space-evenly;
-    /* position: absolute; */
     flex-wrap: wrap;
     margin: 21px;
     gap:10px;
@@ -39,7 +38,6 @@ input {
     border-radius: 5px;
     border-style: none;
     padding: 9px;
-    /* position: relative; */
     
 }
 
@@ -50,7 +48,6 @@ input {
     box-shadow: 1.5px 1.5px 1.5px;
     font-size: medium;
     border-style: none;
-    /* position: relative; */
 }
 
 .addbtn:hover {
