@@ -20,7 +20,10 @@ function render () {
         ul.innerHTML = "";
         taskArr.forEach((item, index) => {
         let toDo = document.createElement("li");
+        let taskNode = document.createElement("span");
         let statusUpdate = document.createElement("span");
+
+        taskNode.innerText = `${item.task}`;
         statusUpdate.innerText = item.status;
 
         // adding event listner for status update
@@ -40,6 +43,7 @@ function render () {
             render();
         });
 
+        toDo.appendChild(taskNode);
         toDo.appendChild(statusUpdate);
         toDo.appendChild(removeBtn);
         ul.appendChild(toDo);    
