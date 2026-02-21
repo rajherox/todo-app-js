@@ -66,3 +66,7 @@ ul li {
     justify-content: space-evenly;
 }
 
+.toDoChilds:hover {
+    cursor: pointer;
+}
+

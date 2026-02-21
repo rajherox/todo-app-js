@@ -24,7 +24,9 @@ function render () {
         let statusUpdate = document.createElement("span");
 
         taskNode.innerText = `${item.task}`;
+        taskNode.classList.add("toDoChilds");
         statusUpdate.innerText = item.status;
+        statusUpdate.classList.add("toDoChilds");
 
         // adding event listner for status update
         statusUpdate.addEventListener(("click"), () => {
@@ -37,6 +39,7 @@ function render () {
         });
         let removeBtn = document.createElement("button");
         removeBtn.innerText = "❎";
+        removeBtn.classList.add("toDoChilds");
 
          removeBtn.addEventListener(("click"), () => {
             taskArr.splice(index, 1);
