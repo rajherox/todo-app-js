@@ -20,8 +20,18 @@ function render () {
         ul.innerHTML = "";
         taskArr.forEach((item, index) => {
         let toDo = document.createElement("li");
-        toDo.innerText = `${item.task} - ${item.status}`;
+        let statusUpdate = document.createElement("span");
+        statusUpdate.innerText = item.status;
 
+        // adding event listner for status update
+        statusUpdate.addEventListener(("click"), () => {
+            if (item.status == "pending") {
+                item.status = "completed";
+            } else {
+                item.status = "pending";
+            }
+            render();
+        });
         let removeBtn = document.createElement("button");
         removeBtn.innerText = "❎";
 
@@ -29,6 +39,8 @@ function render () {
             taskArr.splice(index, 1);
             render();
         });
+
+        toDo.appendChild(statusUpdate);
         toDo.appendChild(removeBtn);
         ul.appendChild(toDo);    
     });
