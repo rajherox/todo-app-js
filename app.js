@@ -46,6 +46,41 @@ function render () {
             render();
         });
 
+        // Adding task edit functionality
+        taskNode.addEventListener("click", () => {
+            let editTask = document.createElement("input");
+            editTask.value = item.task;
+            
+            // we can use only one of them or both 
+            // editTask.addEventListener(("blur"), () => {
+                //     item.task = editTask.value;
+                //     render();
+                // }) 
+                // editTask.addEventListener(("keydown"),(e) => {
+                    //     if (e.key === "Enter" ) {
+                        //         item.task = editTask.value;
+                        //         render();
+                        //     };
+                        // });
+
+            // But using both can cause double execution issue
+            // So
+            function saveEdit() {
+                item.task = editTask.value;
+                render();
+            };
+
+            editTask.addEventListener(("keydown"), (e) => {
+                if (e.key === "Enter") {
+                    saveEdit();
+                };
+            });
+            editTask.addEventListener("blur", saveEdit);
+
+            toDo.replaceChild(editTask, taskNode);
+            editTask.focus();
+        });
+
         toDo.appendChild(taskNode);
         toDo.appendChild(statusUpdate);
         toDo.appendChild(removeBtn);
