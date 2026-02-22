@@ -11,15 +11,16 @@ The app currently includes **core functionality**: adding and deleting tasks.
 ## Features
 - Add a task
 - Delete a task
+- Edit a task
 
 ---
 
 ## Future Improvements
 - CSS styling and responsive design  
 - Save tasks to local storage  
-- Use proper data structures (arrays/objects) for task management  
-- Add edit and complete task functionality  
-- Implement filters (all / completed / pending)
+- Use proper data structures (arrays/objects) for task management  (done)
+- Add edit and complete task functionality  (done)
+- Implement filters (all / completed / pending) 
 
 ---
 
